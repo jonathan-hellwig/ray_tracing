@@ -1,0 +1,2 @@
+# The plan
+- uninstall Matlab

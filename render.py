@@ -2,13 +2,11 @@ from typing import List
 import matplotlib.pyplot as plt
 
 
-def render(reflectors, rays):
+def render(reflectors, rays, xlim=[0,100], zlim=[0,100]):
     for reflector in reflectors:
-        print(reflector.start)
-        print(reflector.end)
         ax = plt.gca()
-        ax.set_xlim([0, 10])
-        ax.set_ylim([0, 10])
+        ax.set_xlim(xlim)
+        ax.set_ylim(zlim)
         ax.invert_yaxis()
         plt.plot([reflector.start[0], reflector.end[0]], [
                  reflector.start[1], reflector.end[1]], color='r')
